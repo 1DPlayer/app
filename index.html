@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <title>One Direction - Music Player Online | iMagiCine</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/themes-colours.css">
+</head>
+<body>
+	
+	<div class="window themes">
+		<div class="bar top"><span>Selecionar tema</span></div>
+		<div class="content">
+			<div class="area">
+				<div class="theTheme default">Escuro <div class="geraltema theme-toggle default" data-theme="default"><div class="bg"></div></div></div>
+				<div class="theTheme light">Claro <div class="geraltema theme-toggle light" data-theme="light"><div class="bg"></div></div></div>
+				<div class="theTheme blue">Azul <div class="geraltema theme-toggle blue" data-theme="blue"><div class="bg"></div></div></div>
+			</div>
+		</div>
+		<div class="bar bottom exit"><span>Feito</span></div>
+	</div>
+	
+	<div class="window color">
+		<div class="bar top"><span>Cor dos detalhes</span></div>
+		<div class="content">
+			<div class="area">
+				<div class="theDetail um" data-detail="um"><div class="bg"></div></div>
+				<div class="theDetail dois" data-detail="dois"><div class="bg"></div></div>
+				<div class="theDetail tres" data-detail="tres"><div class="bg"></div></div>
+				<div class="theDetail quatro" data-detail="quatro"><div class="bg"></div></div>
+				<div class="theDetail cinco" data-detail="cinco"><div class="bg"></div></div>
+				<div class="theDetail seis" data-detail="seis"><div class="bg"></div></div>
+				<div class="theDetail sete" data-detail="sete"><div class="bg"></div></div>
+				<div class="theDetail oito" data-detail="oito"><div class="bg"></div></div>
+				<div class="theDetail nove" data-detail="nove"><div class="bg"></div></div>
+				<div class="theDetail dez" data-detail="dez"><div class="bg"></div></div>
+				<div class="theDetail onze" data-detail="onze"><div class="bg"></div></div>
+				<div class="theDetail doze" data-detail="doze"><div class="bg"></div></div>
+				<div class="theDetail treze" data-detail="treze"><div class="bg"></div></div>
+				<div class="theDetail quatorze" data-detail="quatorze"><div class="bg"></div></div>
+				<div class="theDetail quinze" data-detail="quinze"><div class="bg"></div></div>
+			</div>
+		</div>
+		<div class="bar bottom exit"><span>Feito</span></div>
+	</div>
+	
+	<div class="window updates">
+		<div class="bar top exit x"><span>&times;</span></div>
+		<div class="content">
+			<div class="area">
+				<div class="errorUpdate">
+					<div class="error-img"></div>
+					<div class="problem"></div>
+					<div class="error">Ocorreu um erro.<br>
+					<span>Não foi possível receber o status sobre atualizações.</span>
+					</div>
+					Possíveis causas:
+					<div class="options">
+					● Falta de conexão com a internet - faça uma verificação e reinicie o aplicativo.<br>
+					● Problema interno temporário (tente novamente mais tarde)*
+					</div>
+					<div class="if-persist">* O erro continua? <a href="mailto:1DPlayer.contato@gmail.com?subject=Relat%C3%B3rio%20de%20erro%20(1D%20Player)&amp;body=A%20sess%C3%A3o%20%22Verificar%20Atualiza%C3%A7%C3%A3o%22%20est%C3%A1%20com%20problemas.%0A%E2%80%94%20Contato%20via%20aplicativo%201D%20Player">Avise-nos</a></div>
+					</div>
+				</div>
+				
+				<iframe id="updateIframe" src="https://1dplayer.github.io/app/songs/updates.html"></iframe>
+			</div>
+		</div>
+	
+	<div class="window about">
+		<div class="bar top exit x"><span>&times;</span></div>
+		<div class="content">
+			<div class="area">
+				<div class="sobre">Sobre</div>
+				<div class="app"></div>
+				<div class="app-name">1D Player<br><span>Um tocador online de músicas da boyband One Direction</span></div>
+				<div class="creator">
+				<div class="picture"></div>
+				<div class="hisname">Thiago Soubra<br><span>Pela arte e design do aplicativo</span></div>
+				<a class="network"></a><a href="mailto:thiagosoubra@gmail.com">thiagosoubra@gmail.com</a>
+				</div>
+				<div class="imagicine"></div>
+		</div>
+	</div>
+	</div>
+	
+	<div class="abaMenu">
+		<div class="bar">
+			<span>Opções</span>
+			<a class="menutoggle fadeout close">&times;</a>
+		</div>
+		<div class="content">
+			<div class="area">
+				<div class="session">Cores</div>
+				<div class="option fadebg" id="set-theme">Tema geral<br><div class="status ativado">Escuro Ativado</div></div>
+				<div class="option fadebg" id="set-color" >Cor dos detalhes<br><div class="status">O padrão é vermelho</div><div class="current-color"></div></div>
+				<div class="session">Geral</div>
+				<div class="option fadebg wline" id="see-update">Verificar atualização</div>
+				<a href="mailto:contato@imagicine.org-br.pw?subject=Contato%20via%201D%20Player"><div class="option wline">Entrar em contato</div></a>
+				<div class="option fadebg wline" id="see-about">Sobre</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="fade"></div>
+	
+	<div class="controls">
+		<div class="seek-bar"><div class="progress-bar"></div></div>
+		<div class="buttons">
+			<div class="amusica lyricshow">What Makes You Beautiful</div>
+			<div class="control">
+				<div class="prev"><div class="bg"></div></div>
+				<div class="play"><div class="bg"></div></div>
+				<div class="next"><div class="bg"></div></div>
+			</div>
+			<div class="letras lyricshow"><div class="bg"></div></div>
+		</div>
+	</div>
+	
+  	<div id="conteudo" class="conteudo">
+  		
+  		<div class="coverbg all"><div class="cover all"></div></div><div class="linear"></div>
+  		<div class="menutoggle button"><div class="menubg"></div></div>
+  		
+  		<div class="page">
+			<div class="dados">
+				<div class="up artista">One Direction<p class="audios">5 Álbuns <span>●</span> 91 Músicas</p></div>
+				<div class="playall play tocar"><div class="bg"></div></div>
+				<p class="detail">Biografia</p>
+				<div class="biografia">
+					One Direction, também conhecida como 1D, é uma boyband famosa mundialmente. Seus integrantes atuais são Louis Tomlinson, Harry Styles, Liam Payne e Niall Horan. Zayn Malik deixou o grupo por motivos pessoais em Março de 2015. O quinteto foi formado após seus membros participarem do reality show musical The X Factor como competidores solo, até que, durante o programa, a cantora Nicole Scherzinger e o executivo Simon Cowell os uniram para concorrer como um grupo. A banda acabou em terceiro lugar do programa, atrás de Matt Cardle e Rebecca Ferguson.
+					O grupo saiu do The X Factor como um grande sucesso, tanto que com a força das redes sociais seus dois álbuns, "Up All Night"e "Take Me Home", quebraram muitos recordes, além de alcançar o topo das paradas pelo mundo todo, e gerou singles de sucesso, incluindo "What Makes You Beautiful" e "Live While We're Young".
+					Muitas vezes já descritos como os novos "The Beatles", o grupo provocou o ressurgimento do conceito boyband e de fazer parte de uma nova "Invasão Britânica", sucedendo os The Beatles e as Spice Girls. Além disso, o grupo entrou para o livro dos recordes, o Guinness Book, por serem os primeiros britânicos a permanecerem no topo da Billboard 200 por mais de 15 semanas.
+					"What Makes You Beautiful" se tornou um hit mundial, o que levou o álbum Up All Night vender mais de 5 milhões de cópias em todo o mundo. Em 2012, Take Me Home, estreou na 1.ª posição em mais de 40 países, incluindo a Billboard 200, vendendo mais de 540 mil cópias nos Estados Unidos. Na sua estreia pelo mundo todo, o álbum vendeu pouco mais de 1.616.000 cópias. Em menos de 2 semanas do lançamento, o álbum foi certificado platina nos Estados Unidos, por vender 1 milhão de cópias no país.
+					Até agora, a boyband já vendeu mais de 19 milhões de singles por todo o mundo, 10 milhões de álbuns, e arrecadou 5 milhões em apenas 10 apresentações com sua primeira turnê em 2012. No total, foram mais de 35 milhões de discos e singles vendidos em todo o mundo, quinze milhões apenas nos Estados Unidos, tornando-se uma das bandas recordistas de vendas em nível global. De acordo com Nick Gatfield, o presidente da Sony Music Entertainment, One Direction possuía uma fortuna de US$ 50 milhões até junho de 2012. Eles foram proclamados em 2012 como "Melhor Novo Artista" pela Billboard, enquanto o portal The Huffington Post declarou: "2012, o ano da One Direction".
+				</div>
+				<p class="detail">Álbuns</p>
+			</div>
+			
+			<div class="faixas">
+				<div class="galeria">
+				<div class="area">
+					
+				<a href="#"><div class="album uan">
+					<img src="img/1.jpg" alt="Up All Night - Album">
+					<p class="nomedoalbum">Up All Night<br>(The Souvenir Edition)</p>
+				</div></a>
+				
+				<a href="#"><div class="album tmh">
+					<img src="img/2.jpg" alt="Take Me Home - Album">
+					<p class="nomedoalbum">Take Me Home<br>(Special Deluxe Edition)</p>
+				</div></a>
+				
+				<a href="#"><div class="album mm">
+					<img src="img/3.jpg" alt="Midnight Memories - Album">
+					<p class="nomedoalbum">Midnight Memories<br>(The Ultimate Edition)</p>
+				</div></a>
+				
+				<a href="#"><div class="album f">
+					<img src="img/4.jpg" alt="FOUR - Album">
+					<p class="nomedoalbum">FOUR<br>(Deluxe Version)</p>
+				</div></a>
+			
+				<a href="#"><div class="album mita">
+					<img src="img/5.jpg" alt="Made in the A.M.">
+					<p class="nomedoalbum">Made In The A.M.<br>(Deluxe Edition)</p>
+				</div></a>
+			</div>
+			</div>
+		<p class="detail musica">Músicas</p>
+		<div class="search"><div class="bg"></div></div>
+		<input placeholder="Procurar" class="procurar"/></div>
+		
+		<div class="faixas">
+			<div class="faixa n1 ativa tocar">
+				<div class="number">-</div>
+				<div class="name ativo">What Makes You Beautiful</div>
+				<div class="time">3:19</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Gotta Be You (2012 US Version)</div>
+				<div class="time">4:04</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">One Thing</div>
+				<div class="time">3:17</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">More Than This</div>
+				<div class="time">3:49</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Up All Night</div>
+				<div class="time">3:14</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">I Wish</div>
+				<div class="time">3:36</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Tell Me a Lie</div>
+				<div class="time">3:18</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Taken</div>
+				<div class="time">3:57</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">I Want</div>
+				<div class="time">2:53</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Everything About You</div>
+				<div class="time">3:37</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Same Mistakes</div>
+				<div class="time">3:38</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Save You Tonight</div>
+				<div class="time">3:25</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Stole My Heart</div>
+				<div class="time">3:25</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Stand Up</div>
+				<div class="time">2:55</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Moments</div>
+				<div class="time">4:22</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Another World</div>
+				<div class="time">3:23</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Na Na Na</div>
+				<div class="time">3:05</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">I Should Have Kissed You</div>
+				<div class="time">3:35</div>
+			</div>
+		
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Live While We're Young</div>
+				<div class="time">3:20</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Kiss You</div>
+				<div class="time">3:02</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Little Things</div>
+				<div class="time">3:39</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">C'mon, C'mon</div>
+				<div class="time">2:44</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Last First Kiss</div>
+				<div class="time">3:23</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Heart Attack</div>
+				<div class="time">2:56</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Rock Me</div>
+				<div class="time">3:20</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Change My Mind</div>
+				<div class="time">3:32</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">I Would</div>
+				<div class="time">3:20</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Over Again</div>
+				<div class="time">3:02</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Back For You</div>
+				<div class="time">2:58</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">They Don't Know About Us</div>
+				<div class="time">3:20</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Summer Love</div>
+				<div class="time">3:28</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">She's Not Afraid</div>
+				<div class="time">3:10</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Loved You First</div>
+				<div class="time">3:04</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Nobody Compares</div>
+				<div class="time">3:31</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Still the One</div>
+				<div class="time">3:02</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Truly Madly Deeply</div>
+				<div class="time">3:00</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Magic</div>
+				<div class="time">3:04</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Irresistible</div>
+				<div class="time">3:56</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Live While We're Young (Dave Aude Remix)</div>
+				<div class="time">3:15</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Kiss You (Sharoque Remix)</div>
+				<div class="time">4:23</div>
+			</div>
+		
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Best Song Ever</div>
+				<div class="time">3:20</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Story of My Life</div>
+				<div class="time">4:05</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Diana</div>
+				<div class="time">3:04</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Midnight Memories</div>
+				<div class="time">2:56</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">You & I</div>
+				<div class="time">3:57</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Don't Forget Where You Belong</div>
+				<div class="time">4:01</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Strong</div>
+				<div class="time">3:04</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Happily</div>
+				<div class="time">2:55</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Right Now</div>
+				<div class="time">3:20</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Little Black Dress</div>
+				<div class="time">3:37</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Through the Dark</div>
+				<div class="time">3:41</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Something Great</div>
+				<div class="time">3:56</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Little White Lies</div>
+				<div class="time">3:17</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Better Than Words</div>
+				<div class="time">3:28</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Why Don't We Go There</div>
+				<div class="time">2:54</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Does He Know?</div>
+				<div class="time">2:59</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Alive</div>
+				<div class="time">2:41</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Half a Heart</div>
+				<div class="time">3:08</div>
+			</div>
+				
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Steal My Girl</div>
+				<div class="time">3:48</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Ready to Run</div>
+				<div class="time">3:16</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Where Do Broken Hearts Go</div>
+				<div class="time">3:49</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">18</div>
+				<div class="time">4:08</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Girl Almighty</div>
+				<div class="time">3:21</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Fool's Gold</div>
+				<div class="time">3:30</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Night Changes</div>
+				<div class="time">3:46</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">No Control</div>
+				<div class="time">3:19</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Fireproof</div>
+				<div class="time">2:54</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Spaces</div>
+				<div class="time">4:16</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Stockholm Syndrome</div>
+				<div class="time">3:34</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Clouds</div>
+				<div class="time">3:51</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Change Your Ticket</div>
+				<div class="time">4:26</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Illusion</div>
+				<div class="time">3:14</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Once in a Lifetime</div>
+				<div class="time">2:28</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Act My Age</div>
+				<div class="time">3:18</div>
+			</div>
+							
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Hey Angel</div>
+				<div class="time">4:00</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Drag Me Down</div>
+				<div class="time">3:12</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Perfect</div>
+				<div class="time">3:50</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Infinity</div>
+				<div class="time">4:09</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">End of the Day</div>
+				<div class="time">3:14</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">If I Could Fly</div>
+				<div class="time">3:50</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Long Way Down</div>
+				<div class="time">3:12</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Never Enough</div>
+				<div class="time">3:33</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Olivia</div>
+				<div class="time">3:57</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">What a Feeling</div>
+				<div class="time">3:20</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Love You Goodbye</div>
+				<div class="time">3:16</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">I Want to Write You a Song</div>
+				<div class="time">2:59</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">History</div>
+				<div class="time">3:07</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Temporary Fix</div>
+				<div class="time">2:55</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Walking in the Wind</div>
+				<div class="time">3:22</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">Wolves</div>
+				<div class="time">4:01</div>
+			</div>
+			<div class="faixa n1 tocar">
+				<div class="number">-</div>
+				<div class="name">A.M.</div>
+				<div class="time">3:29</div>
+			</div>
+			</div>
+		</div>
+		<audio class="music"><source src="https://1dplayer.github.io/app/songs/0.mp3" type="audio/mpeg"> Your browser doesn't support video API</audio>
+		</div>
+		
+	<div class="uan songs">
+	<div class="coverbg uan"><div class="cover uan"></div></div><div class="linear"></div>
+	<a href="#"><div class="button back"><div class="bg"></div></div></a>
+	<div class="page">
+	<div class="dados">
+	<div class="artista">Up All Night (The Souvenir Edition)<p class="audios">18 Músicas <span>●</span> 2011</p></div>
+	<p class="detail">Músicas</p>
+	</div>
+	<div class="faixas">
+	<div class="faixa n2 ativa tocar">
+	<div class="number">1</div>
+	<div class="name">What Makes You Beautiful</div>
+	<div class="time">3:19</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">2</div>
+	<div class="name">Gotta Be You (2012 US Version)</div>
+	<div class="time">4:04</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">3</div>
+	<div class="name">One Thing</div>
+	<div class="time">3:17</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">4</div>
+	<div class="name">More Than This</div>
+	<div class="time">3:49</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">5</div>
+	<div class="name">Up All Night</div>
+	<div class="time">3:14</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">6</div>
+	<div class="name">I Wish</div>
+	<div class="time">3:36</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">7</div>
+	<div class="name">Tell Me a Lie</div>
+	<div class="time">3:18</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">8</div>
+	<div class="name">Taken</div>
+	<div class="time">3:57</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">9</div>
+	<div class="name">I Want</div>
+	<div class="time">2:53</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">10</div>
+	<div class="name">Everything About You</div>
+	<div class="time">3:37</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">11</div>
+	<div class="name">Same Mistakes</div>
+	<div class="time">3:38</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">12</div>
+	<div class="name">Save You Tonight</div>
+	<div class="time">3:25</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">13</div>
+	<div class="name">Stole My Heart</div>
+	<div class="time">3:25</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">14</div>
+	<div class="name">Stand Up</div>
+	<div class="time">2:55</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">15</div>
+	<div class="name">Moments</div>
+	<div class="time">4:22</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">16</div>
+	<div class="name">Another World</div>
+	<div class="time">3:23</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">17</div>
+	<div class="name">Na Na Na</div>
+	<div class="time">3:05</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">18</div>
+	<div class="name">I Should Have Kissed You</div>
+	<div class="time">3:35</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	
+	<div class="tmh songs">
+	<div class="coverbg tmh"><div class="cover tmh"></div></div><div class="linear"></div>
+	<a href="#"><div class="button back"><div class="bg"></div></div></a>
+	<div class="page">
+	<div class="dados">
+	<div class="artista">Take Me Home (Special Deluxe Edition)<p class="audios">22 Músicas <span>●</span> 2012</p></div>
+	<p class="detail">Músicas</p>
+	</div>
+	<div class="faixas">
+	<div class="faixa n2 tocar">
+	<div class="number">1</div>
+	<div class="name">Live While We're Young</div>
+	<div class="time">3:20</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">2</div>
+	<div class="name">Kiss You</div>
+	<div class="time">3:02</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">3</div>
+	<div class="name">Little Things</div>
+	<div class="time">3:39</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">4</div>
+	<div class="name">C'mon, C'mon</div>
+	<div class="time">2:44</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">5</div>
+	<div class="name">Last First Kiss</div>
+	<div class="time">3:23</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">6</div>
+	<div class="name">Heart Attack</div>
+	<div class="time">2:56</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">7</div>
+	<div class="name">Rock Me</div>
+	<div class="time">3:20</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">8</div>
+	<div class="name">Change My Mind</div>
+	<div class="time">3:32</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">9</div>
+	<div class="name">I Would</div>
+	<div class="time">3:20</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">10</div>
+	<div class="name">Over Again</div>
+	<div class="time">3:02</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">11</div>
+	<div class="name">Back For You</div>
+	<div class="time">2:58</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">12</div>
+	<div class="name">They Don't Know About Us</div>
+	<div class="time">3:20</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">13</div>
+	<div class="name">Summer Love</div>
+	<div class="time">3:28</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">14</div>
+	<div class="name">She's Not Afraid</div>
+	<div class="time">3:10</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">15</div>
+	<div class="name">Loved You First</div>
+	<div class="time">3:04</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">16</div>
+	<div class="name">Nobody Compares</div>
+	<div class="time">3:31</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">17</div>
+	<div class="name">Still the One</div>
+	<div class="time">3:02</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">18</div>
+	<div class="name">Truly Madly Deeply</div>
+	<div class="time">3:00</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">19</div>
+	<div class="name">Magic</div>
+	<div class="time">3:04</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">20</div>
+	<div class="name">Irresistible</div>
+	<div class="time">3:56</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">21</div>
+	<div class="name">Live While We're Young (Dave Aude Remix)</div>
+	<div class="time">3:15</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">22</div>
+	<div class="name">Kiss You (Sharoque Remix)</div>
+	<div class="time">4:23</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	
+	<div class="mm songs">
+	<div class="coverbg mm"><div class="cover mm"></div></div><div class="linear"></div>
+	<a href="#"><div class="button back"><div class="bg"></div></div></a>
+	<div class="page">
+	<div class="dados">
+	<div class="artista">Midnight Memories (The Ultimate Edition)<p class="audios">18 Músicas <span>●</span> 2013</p></div>
+	<p class="detail">Músicas</p>
+	</div>
+	<div class="faixas">
+	<div class="faixa n2 tocar">
+	<div class="number">1</div>
+	<div class="name">Best Song Ever</div>
+	<div class="time">3:20</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">2</div>
+	<div class="name">Story of My Life</div>
+	<div class="time">4:05</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">3</div>
+	<div class="name">Diana</div>
+	<div class="time">3:04</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">4</div>
+	<div class="name">Midnight Memories</div>
+	<div class="time">2:56</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">5</div>
+	<div class="name">You & I</div>
+	<div class="time">3:57</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">6</div>
+	<div class="name">Don't Forget Where You Belong</div>
+	<div class="time">4:01</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">7</div>
+	<div class="name">Strong</div>
+	<div class="time">3:04</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">8</div>
+	<div class="name">Happily</div>
+	<div class="time">2:55</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">9</div>
+	<div class="name">Right Now</div>
+	<div class="time">3:20</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">10</div>
+	<div class="name">Little Black Dress</div>
+	<div class="time">3:37</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">11</div>
+	<div class="name">Through the Dark</div>
+	<div class="time">3:41</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">12</div>
+	<div class="name">Something Great</div>
+	<div class="time">3:56</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">13</div>
+	<div class="name">Little White Lies</div>
+	<div class="time">3:17</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">14</div>
+	<div class="name">Better Than Words</div>
+	<div class="time">3:28</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">15</div>
+	<div class="name">Why Don't We Go There</div>
+	<div class="time">2:54</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">16</div>
+	<div class="name">Does He Know?</div>
+	<div class="time">2:59</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">17</div>
+	<div class="name">Alive</div>
+	<div class="time">2:41</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">18</div>
+	<div class="name">Half a Heart</div>
+	<div class="time">3:08</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	
+	<div class="f songs">
+	<div class="coverbg f"><div class="cover f"></div></div><div class="linear"></div>
+	<a href="#"><div class="button back"><div class="bg"></div></div></a>
+	<div class="page">
+	<div class="dados">
+	<div class="artista">FOUR (Deluxe Version)<p class="audios">16 Músicas <span>●</span> 2014</p></div>
+	<p class="detail">Músicas</p>
+	</div>
+	<div class="faixas">
+	<div class="faixa n2 tocar">
+	<div class="number">1</div>
+	<div class="name">Steal My Girl</div>
+	<div class="time">3:48</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">2</div>
+	<div class="name">Ready to Run</div>
+	<div class="time">3:16</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">3</div>
+	<div class="name">Where Do Broken Hearts Go</div>
+	<div class="time">3:49</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">4</div>
+	<div class="name">18</div>
+	<div class="time">4:08</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">5</div>
+	<div class="name">Girl Almighty</div>
+	<div class="time">3:21</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">6</div>
+	<div class="name">Fool's Gold</div>
+	<div class="time">3:30</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">7</div>
+	<div class="name">Night Changes</div>
+	<div class="time">3:46</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">8</div>
+	<div class="name">No Control</div>
+	<div class="time">3:19</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">9</div>
+	<div class="name">Fireproof</div>
+	<div class="time">2:54</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">10</div>
+	<div class="name">Spaces</div>
+	<div class="time">4:16</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">11</div>
+	<div class="name">Stockholm Syndrome</div>
+	<div class="time">3:34</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">12</div>
+	<div class="name">Clouds</div>
+	<div class="time">3:51</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">13</div>
+	<div class="name">Change Your Ticket</div>
+	<div class="time">4:26</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">14</div>
+	<div class="name">Illusion</div>
+	<div class="time">3:14</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">15</div>
+	<div class="name">Once in a Lifetime</div>
+	<div class="time">2:28</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">16</div>
+	<div class="name">Act My Age</div>
+	<div class="time">3:18</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	
+	<div class="mita songs">
+	<div class="coverbg mita"><div class="cover mita"></div></div><div class="linear"></div>
+	<a href="#"><div class="button back"><div class="bg"></div></div></a>
+	<div class="page">
+	<div class="dados">
+	<div class="artista">Made In The A.M. (Deluxe Edition)<p class="audios">17 Músicas <span>●</span> 2012</p></div>
+	<p class="detail">Músicas</p>
+	</div>
+	
+	<div class="faixas">
+	<div class="faixa n2 tocar">
+	<div class="number">1</div>
+	<div class="name">Hey Angel</div>
+	<div class="time">4:00</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">2</div>
+	<div class="name">Drag Me Down</div>
+	<div class="time">3:12</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">3</div>
+	<div class="name">Perfect</div>
+	<div class="time">3:50</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">4</div>
+	<div class="name">Infinity</div>
+	<div class="time">4:09</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">5</div>
+	<div class="name">End of the Day</div>
+	<div class="time">3:14</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">6</div>
+	<div class="name">If I Could Fly</div>
+	<div class="time">3:50</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">7</div>
+	<div class="name">Long Way Down</div>
+	<div class="time">3:12</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">8</div>
+	<div class="name">Never Enough</div>
+	<div class="time">3:33</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">9</div>
+	<div class="name">Olivia</div>
+	<div class="time">3:57</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">10</div>
+	<div class="name">What a Feeling</div>
+	<div class="time">3:20</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">11</div>
+	<div class="name">Love You Goodbye</div>
+	<div class="time">3:16</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">12</div>
+	<div class="name">I Want to Write You a Song</div>
+	<div class="time">2:59</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">13</div>
+	<div class="name">History</div>
+	<div class="time">3:07</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">14</div>
+	<div class="name">Temporary Fix</div>
+	<div class="time">2:55</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">15</div>
+	<div class="name">Walking in the Wind</div>
+	<div class="time">3:22</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">16</div>
+	<div class="name">Wolves</div>
+	<div class="time">4:01</div>
+	</div>
+	<div class="faixa n2 tocar">
+	<div class="number">17</div>
+	<div class="name">A.M.</div>
+	<div class="time">3:29</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	
+		<iframe class="lyriciframe transitionlyricscreen" src="lyrics/0.html"></iframe>
+		<iframe src="https://1dplayer.github.io/app/songs/alertupdate2.0.html" class="alertIframe"></iframe>
+	
+	<div class="app-popup" style="position: fixed;width: 95%;max-width: 400px;height: 80px;bottom: 10px;background: #FFFFFF;border-radius: 10px;left: 0; right: 0;margin: auto;color: #202020;z-index: 15;box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
+		<div class="exit" style="position: absolute;height: 30px;width: 30px;right: 10px;margin-top: -40px;font-size: 35px;font-family: displaybold, Arial, sans;background: #FFFFFF;border-radius: 50%;text-align: center;line-height: 30px;">&times;</div>
+		<div style="width: 55px;height:55px;background: url(img/appicon.png) no-repeat;background-size: 55px;position: absolute;top: 0;bottom: 0;left: 15px;margin: auto"></div>
+		<div style="font-size: 12px;position: absolute;height: 60px;top:0;bottom: 0;left: 85px;margin: auto">
+			<div style="font-size: 18px;font-family: displaybold, Arial, sans;padding-right: 25px;background: url(img/up-arrow.png) no-repeat center right;background-size: 20px;">1D Player <span style="font-family: displayregular, Arial, sans;">APP</span></div>
+			<div style="font-size: 13px;line-height: 13px;font-family: displayregular, Arial, sans;">
+			● Sem anúncios<br>
+			● Letras offline<br>
+			● Apenas 1MB
+			</div>
+		</div>
+		<a href="download/1D_Player-1.0.apk" download="1D Player.apk"><div style="position: absolute;right: 0;height: 100%;width: 75px;background: url(img/up-arrow.png) no-repeat #333 center center;background-size: 20px;border-radius: 0 10px 10px 0"></div></a>
+	</div>
+	
+<script src="js/jquery.min.js"></script>
+<script src="js/scripts.js"></script>
+<script src="js/player.js"></script>
+<script src="js/colours.js"></script>
+<script src="js/themes.js"></script>
+</body>
+</html>
