@@ -1,0 +1,142 @@
+/* details color themes */
+.session[detail="um"], .bar.bottom[detail="um"], .detail[detail="um"] { color: #9F2122;}
+.session[detail="dois"], .bar.bottom[detail="dois"], .detail[detail="dois"] { color: #F40057;}
+.session[detail="tres"], .bar.bottom[detail="tres"], .detail[detail="tres"] { color: #D500F8;}
+.session[detail="quatro"], .bar.bottom[detail="quatro"], .detail[detail="quatro"] { color: #631FFE;}
+.session[detail="cinco"], .bar.bottom[detail="cinco"], .detail[detail="cinco"] { color: #3C59F8;}
+.session[detail="seis"], .bar.bottom[detail="seis"], .detail[detail="seis"] { color: #2879FE;}
+.session[detail="sete"], .bar.bottom[detail="sete"], .detail[detail="sete"] { color: #00B0FE;}
+.session[detail="oito"], .bar.bottom[detail="oito"], .detail[detail="oito"] { color: #00E5FD;}
+.session[detail="nove"], .bar.bottom[detail="nove"], .detail[detail="nove"] { color: #1CE8B3;}
+.session[detail="dez"], .bar.bottom[detail="dez"], .detail[detail="dez"] { color: #76FF02;}
+.session[detail="onze"], .bar.bottom[detail="onze"], .detail[detail="onze"] { color: #C5FE00;}
+.session[detail="doze"], .bar.bottom[detail="doze"], .detail[detail="doze"] { color: #FEEA00;}
+.session[detail="treze"], .bar.bottom[detail="treze"], .detail[detail="treze"] { color: #FEC400;}
+.session[detail="quatorze"], .bar.bottom[detail="quatorze"], .detail[detail="quatorze"] { color: #FE9100;}
+.session[detail="quinze"], .bar.bottom[detail="quinze"], .detail[detail="quinze"] { color: #FF3D00;}
+
+.theDetail.um, .playall[detail="um"], .seek-bar .progress-bar[detail="um"], .current-color[detail="um"] { background-color: #9F2122;}
+.theDetail.dois, .playall[detail="dois"], .seek-bar .progress-bar[detail="dois"], .current-color[detail="dois"] { background-color: #F40057;}
+.theDetail.tres, .playall[detail="tres"], .seek-bar .progress-bar[detail="tres"], .current-color[detail="tres"] { background-color: #D500F8;}
+.theDetail.quatro, .playall[detail="quatro"], .seek-bar .progress-bar[detail="quatro"], .current-color[detail="quatro"] { background-color: #631FFE;}
+.theDetail.cinco, .playall[detail="cinco"], .seek-bar .progress-bar[detail="cinco"], .current-color[detail="cinco"] { background-color: #3C59F8;}
+.theDetail.seis, .playall[detail="seis"], .seek-bar .progress-bar[detail="seis"], .current-color[detail="seis"] { background-color: #2879FE;}
+.theDetail.sete, .playall[detail="sete"], .seek-bar .progress-bar[detail="sete"], .current-color[detail="sete"] { background-color: #00B0FE;}
+.theDetail.oito, .playall[detail="oito"], .seek-bar .progress-bar[detail="oito"], .current-color[detail="oito"] { background-color: #00E5FD;}
+.theDetail.nove, .playall[detail="nove"], .seek-bar .progress-bar[detail="nove"], .current-color[detail="nove"] { background-color: #1CE8B3;}
+.theDetail.dez, .playall[detail="dez"], .seek-bar .progress-bar[detail="dez"], .current-color[detail="dez"] { background-color: #76FF02;}
+.theDetail.onze, .playall[detail="onze"], .seek-bar .progress-bar[detail="onze"], .current-color[detail="onze"] { background-color: #C5FE00;}
+.theDetail.doze, .playall[detail="doze"], .seek-bar .progress-bar[detail="doze"], .current-color[detail="doze"] { background-color: #FEEA00;}
+.theDetail.treze, .playall[detail="treze"], .seek-bar .progress-bar[detail="treze"], .current-color[detail="treze"] { background-color: #FEC400;}
+.theDetail.quatorze, .playall[detail="quatorze"], .seek-bar .progress-bar[detail="quatorze"], .current-color[detail="quatorze"] { background-color: #FE9100;}
+.theDetail.quinze, .playall[detail="quinze"], .seek-bar .progress-bar[detail="quinze"], .current-color[detail="quinze"] { background-color: #FF3D00;}
+
+.theDetail.um .bg[detail="um"], .theDetail.dois .bg[detail="dois"], .theDetail.tres .bg[detail="tres"], .theDetail.quatro .bg[detail="quatro"], .theDetail.cinco .bg[detail="cinco"], .theDetail.seis .bg[detail="seis"], .theDetail.sete .bg[detail="sete"], .theDetail.oito .bg[detail="oito"], .theDetail.nove .bg[detail="nove"], .theDetail.dez .bg[detail="dez"], .theDetail.onze .bg[detail="onze"], .theDetail.doze .bg[detail="doze"], .theDetail.treze .bg[detail="treze"], .theDetail.quatorze .bg[detail="quatorze"], .theDetail.quinze .bg[detail="quinze"] {
+	background-color: #FFFFFF;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+}
+.theDetail.um .bg[detail="dois"], .theDetail.um .bg[detail="tres"], .theDetail.um .bg[detail="quatro"], .theDetail.um .bg[detail="cinco"], .theDetail.um .bg[detail="seis"], .theDetail.um .bg[detail="sete"], .theDetail.um .bg[detail="oito"], .theDetail.um .bg[detail="nove"], .theDetail.um .bg[detail="dez"], .theDetail.um .bg[detail="onze"], .theDetail.um .bg[detail="doze"], .theDetail.um .bg[detail="treze"], .theDetail.um .bg[detail="quatorze"], .theDetail.um .bg[detail="quinze"] {
+	background-color: transparent;
+}
+
+/* general themes */
+
+.geraltema.default .bg[theme="blue"], .geraltema.light .bg[theme="blue"], .geraltema.default .bg[theme="light"], .geraltema.blue .bg[theme="light"] {
+ 	background: transparent;
+}
+.geraltema.blue[theme="blue"]{
+	border: 3px solid #FFFFFF;
+}
+
+	/* blue */
+	
+body[theme="blue"], .controls[theme="blue"], .procurar[theme="blue"], .faixa.ativa[theme="blue"], .window[theme="blue"], .bar[theme="blue"], .abaMenu[theme="blue"], .window.updates .errorUpdate[theme="blue"] {
+	background-color: #183642;
+}
+.page[theme="blue"] {
+	background: url(../img/bluetheme_bg.png);
+	background-size: 100% 100%;
+	background-attachment: fixed;
+}
+.geraltema.blue .bg[theme="blue"] {
+	width: 10px;
+	height: 10px;
+	background: #FFFFFF;
+	border-radius: 50%;
+}
+	/* light */
+
+body[theme="light"], .controls[theme="light"] {
+	background-color: #FFFFFF;
+}
+.page[theme="light"] {
+	background: #FFFFFF;
+	color: #202020;
+	box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.1);
+}
+.procurar[theme="light"] {
+	background-color: #FFFFFF;
+	border: 2px solid #777777;
+	color: #202020;
+}
+.search[theme="light"] {
+	background: url(../img/search.png) rgba(0, 0, 0, 0.3) no-repeat center center;
+	background-size: 18px;
+}
+.faixas .faixa[theme="light"] {
+	border-top: 1px solid #EEEEEE;
+}
+.faixa.ativa[theme="light"] {
+	background: #EEEEEE;
+}
+.faixas .faixa .time[theme="light"] {
+	color: #737373;
+}
+.amusica[theme="light"], .faixas .faixa .number[theme="light"], a[theme="light"] {
+	color: #202020;
+}
+.controls .play[theme="light"], .controls .play.invisible[theme="light"], .next[theme="light"], .prev[theme="light"], .letras[theme="light"] {
+	filter: brightness(65%);
+}
+.window[theme="light"], .bar[theme="light"], .abaMenu[theme="light"], .window.updates .errorUpdate[theme="light"] {
+  background: #BDBDBD;
+  color: #000000;
+}
+.abaMenu div .status[theme="light"] {
+	color: #343434;
+}
+.window.about .content .area[theme="light"] {
+	color: #000000;
+}
+.window .content .area[theme="light"], .about .app-name span[theme="light"] {
+	color: #353535;
+}
+.geraltema[theme="light"]{
+	border: 3px solid #000000;
+}
+.geraltema.light .bg[theme="light"] {
+	width: 10px;
+	height: 10px;
+	background: #000000;
+	border-radius: 50%;
+}
+.geraltema.default .bg[theme="light"] {
+	display: none;
+}
+.window.updates .errorUpdate .error span[theme="light"], .window.updates .errorUpdate .if-persist a[theme="light"] {
+	color: #222222;
+}
+.window.updates .errorUpdate .options[theme="light"] {
+	color: #333333;
+}
+.abaMenu .option:hover[theme="light"] {
+	background: #ACACAC;
+}
+.about .imagicine[theme="light"] {
+	filter: brightness(0%);
+}
+.button[theme="light"] {
+	background: rgba(0, 0, 0, 0.2);
+}
