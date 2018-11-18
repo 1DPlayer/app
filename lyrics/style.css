@@ -1,0 +1,62 @@
+@font-face {
+    font-family: displaybold;
+    src: url(../fonts/displaybold.woff2);
+}
+@font-face {
+    font-family: displayregular;
+    src: url(../fonts/displayregular.woff2);
+}
+body { margin:0;color:#FFFFFF;}
+p {margin:0;}
+
+.window {
+	position: fixed;
+	background: #212121;
+	margin: auto;
+	top:0;bottom:0;left:0;right:0;
+	max-width: 600px;
+}
+.themes {
+	width: 100%; height: 100vh;
+}
+.window .bar {
+	z-index: 1;
+	position: absolute;
+	width: 100%;
+}
+.window .bar span {
+	padding: 0 15px;
+}
+.window .bar.top {
+	top: 0;
+	height: 75px;
+	background: #212121;
+}
+.window .content {
+	position: absolute;
+	top: 0;
+	overflow: scroll;
+	height: 100vh;
+	width: 100%;
+	font-size: 17px;
+	font-family: displayregular, Arial, sans;
+}
+.window .content .area {
+	padding: 85px 20px 65px 20px;
+	background: url(../img/lyricsbg.png);
+	background-size: 100% 100%;
+	margin: 0 15px;
+}
+.nome {
+	font-family: displaybold, Arial, sans;
+	margin: 0 20px; 
+}
+.nome.album {
+	font-size: 14px;
+	margin: 2px 0 0 20px;
+	color: #BBBBBB;
+}
+.nome.musica {
+	font-size: 20px;
+	margin-top: 15px;
+}
