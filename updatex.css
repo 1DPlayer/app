@@ -1,5 +1,5 @@
 .window.updates {
-    display: block;
+    z-index: 11;
     max-height: 330px !important;
 }
 .newUpdate {
