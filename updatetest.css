@@ -1,0 +1,13 @@
+.window.updates {
+    z-index: 11;
+    max-height: 372px !important;
+}
+.newUpdate {
+	display: block;
+}
+.noUpdate {
+	display: none;
+}
+.fade {
+    display: block;
+}
